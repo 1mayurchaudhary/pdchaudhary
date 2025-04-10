@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f3e5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2, h3, p {
+    margin: 10px 0;
+    animation: colorChange 5s infinite alternate;
+}
+
+button {
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 16px;
+    background: #ab47bc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #8e24aa;
+}
+
+@keyframes colorChange {
+    0% { color: #8e24aa; }
+    50% { color: #d81b60; }
+    100% { color: #5e35b1; }
+}
+
+.cake-img {
+    width: 150px;
+    margin: 20px 0;
+}
+
+.memories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.memory-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.page p {
+    max-width: 800px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 2px solid #8e24aa;
+    font-size: 18px;
+}
+
+.heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+.heart {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: floatHearts 6s infinite ease-in-out;
+}
+.heart::before,
+.heart::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+}
+.heart::before { top: -10px; left: 0; }
+.heart::after { left: -10px; top: 0; }
+
+@keyframes floatHearts {
+    0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+}
+
+.balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, #ff6f91, #ff4e50);
+    border-radius: 50% 50% 50% 50%;
+    animation: floatBalloon 6s infinite ease-in-out;
+}
+.balloon::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #555;
+}
+@keyframes floatBalloon {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fallConfetti 5s linear infinite;
+    z-index: 999;
+}
+
+@keyframes fallConfetti {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgMusic" src="background.mp3" autoplay loop></audio>
+    <div id="page1" class="page">
+        <h1>Surprise!!</h1>
+        <h2>Any guesses what would be the surprise?</h2>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div id="page2" class="page" style="display:none;">
+        <h2>Without wasting much time, I'll let you know directly</h2>
+        <button onclick="nextPage()">Reveal Surprise</button>
+    </div>
+
+    <div id="page3" class="page" style="display:none;">
+        <h2>On 13th April 2006</h2>
+        <p>
+            a sweetest and cutest baby girl was born in the house of Mr & Mrs. DALJIBHAI and who knows that it would be my whole WORLD 🌍💖
+        </p>
+        <button onclick="nextPage()">To know more</button>
+    </div>
+
+    <div id="page4" class="page" style="display:none;">
+        <div class="heart-container"></div>
+        <p>
+            Hello!!! My Love it's your birthday. So a loudest wish from my side that HAPPIEST BIRTHDAY MY SWEETHEART 😘❤️, 
+            Sorry I couldn't be with you on this special occasion. 
+Since 25th January 2024 to 13th April 2025 it felt like just one month is over, Loved this time and Hopefully future will be passed this easy and don't forget to enjoy your day to the fullest. 
+            I would like to say just one thing "THANK YOU FOR MAKING ME A MAJOR PART OF YOUR LIFE ❤️"
+            <br><br>LOTS OF LOVE FROM MAYUR 😊
+        </p>
+        <button onclick="nextPage()">Don't forget to collect your birthday cake and throwback to memories</button>
+    </div>
+
+    <div id="page5" class="page" style="display:none;">
+        <div class="balloon-container"></div>
+        <h1>Happy Birthday Pal 🎂 🎁💐🎈</h1>
+        <h2>Cake</h2>
+        <img src="cake.png" alt="Cake" class="cake-img">
+        <h3>Memories</h3>
+        <div class="memories" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+            <img src="mem1.jpg" class="memory-img">
+            <img src="mem2.jpg" class="memory-img">
+            <img src="mem3.jpg" class="memory-img">
+            <img src="mem4.jpg" class="memory-img">
+            <img src="mem5.jpg" class="memory-img">
+            <img src="mem6.jpg" class="memory-img">
+            <img src="mem7.jpg" class="memory-img">
+            <img src="mem8.jpg" class="memory-img">
+            <img src="mem9.jpg" class="memory-img">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
